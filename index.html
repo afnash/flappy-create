@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Clone - Customizable</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <button class="controls-toggle" id="controls-toggle">⚙️</button>
+        
+        <div class="game-container">
+            <div id="game-canvas"></div>
+            
+            <div class="controls-panel" id="controls-panel">
+                <h3>🎨 Customize Your Game</h3>
+                
+                <div class="control-group">
+                    <label for="bird-upload">
+                        <span class="control-icon">🐦</span>
+                        Bird Image:
+                    </label>
+                    <input type="file" id="bird-upload" accept="image/*">
+                    <button id="reset-bird-btn" class="reset-btn">Reset to Original</button>
+                    <small>Automatically resized to 34x24px</small>
+                </div>
+                
+                <div class="control-group">
+                    <label for="flap-sound-upload">
+                        <span class="control-icon">💨</span>
+                        Wing Flap Sound:
+                    </label>
+                    <input type="file" id="flap-sound-upload" accept="audio/*">
+                </div>
+                
+                <div class="control-group">
+                    <label for="score-sound-upload">
+                        <span class="control-icon">⭐</span>
+                        Score Sound:
+                    </label>
+                    <input type="file" id="score-sound-upload" accept="audio/*">
+                </div>
+                
+                <div class="control-group">
+                    <label for="hit-sound-upload">
+                        <span class="control-icon">💥</span>
+                        Hit Sound:
+                    </label>
+                    <input type="file" id="hit-sound-upload" accept="audio/*">
+                </div>
+                
+                <div class="game-info">
+                    <div class="score-display">
+                        <span>Score: <span id="current-score">0</span></span>
+                        <span>Best: <span id="best-score">0</span></span>
+                    </div>
+                    <button id="restart-btn">🔄 Restart Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html> 
